@@ -14,7 +14,7 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })) 
 
-app.use('/', require('./src/routes/index'))
+app.use('/', require('./src/index'))
 
 
 

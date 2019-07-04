@@ -1,12 +1,12 @@
 const { Router } = require('express')
 const router = Router();
-const User = require('../models/User')
+const User = require('./models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const faker = require('faker')
-const { getCategory } = require('../helpers/helper')
-const { getRole } = require('../helpers/helper')
-const { getPhone }= require('../helpers/helper')
+const { getCategory } = require('./helpers/helper')
+const { getRole } = require('./helpers/helper')
+const { getPhone }= require('./helpers/helper')
 
 router.get('/', (req, res, next) => {
     res.send('hello')
