@@ -4,16 +4,22 @@ const morgan = require('morgan')
 const app = express();
 const cors = require('cors')
 const mongoose = require('mongoose')
+const path = require('path');
 
-
- 
-require('./database')
+mongoose.connect('mongodb://localhost/psicon', {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+})
+    .then(db => console.log('DB is connected'))
+    .catch(err => console.log(err))
 
 app.set('port', process.env.PORT || 3000)
 app.use(cors())
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.urlencoded({ extended: false }))
+
 
 app.use('/', require('./routes/index'))
 
