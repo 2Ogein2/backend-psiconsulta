@@ -12,8 +12,8 @@ router.get('/', (req, res, next) => {
     res.send('hello')
 })
 
-router.post('/register', (req, res, next) => {
-    const newUser = new User({
+router.post('/register', async (req, res, next) => {
+    const newUser = await new User({
         email: req.body.email,
         name: req.body.name,
         phoneNumber: req.body.phoneNumber,
