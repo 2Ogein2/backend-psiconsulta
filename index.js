@@ -7,14 +7,14 @@ const mongoose = require('mongoose')
 
 
 
-require('./database')
+require('./src/database')
 
 app.use(cors())
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })) 
 
-app.use('/', require('./routes/index'))
+app.use('/', require('./src/routes/index'))
 
 
 
