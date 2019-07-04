@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/psicon', {
+mongoose.connect('mongodb://localhost/psicon', {
     useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true

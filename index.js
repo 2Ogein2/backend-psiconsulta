@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 
 
 require('./src/database')
-
+app.set('port', process.env.PORT || 3000)
 app.use(cors())
 
 app.use(bodyParser.json());
@@ -18,6 +18,6 @@ app.use('/', require('./src/routes/index'))
 
 
 
-app.listen(3000, () => {
-    console.log('server on port 3000')
+app.listen(app.get('port'), () => {
+    console.log('server on port', app.get('port'))
 })
