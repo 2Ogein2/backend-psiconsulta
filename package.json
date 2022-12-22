@@ -19,7 +19,7 @@
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "heroku": "^7.26.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongodb": "^3.2.7",
     "mongoose": "^5.6.1",
     "morgan": "^1.9.1",
